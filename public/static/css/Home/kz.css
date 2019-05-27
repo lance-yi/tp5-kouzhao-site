@@ -1,0 +1,10 @@
+body section{text-align:left;font-size:.28rem;}
+.sub{overflow:hidden;padding:0 .12rem;border-bottom:1px solid #E3E3E7;}
+.sub p{font-size:.28rem;line-height:.8rem;color:#999;}
+.sub p a{color:#999;outline:none;}
+.tiezi-title{border-bottom:1px solid #E3E3E7;padding:.1rem;font-size:.34rem;color:#656464;line-height:1.5;}
+.tiezi-qs{padding:.2rem .1rem}
+.tiezi-qs-box{margin-bottom:.25rem;}
+.tiezi-qs-box h1{font-size:.32rem;color:red;background:yellow;display:inline;line-height:1.8;}
+.tiezi-qs-box h3{font-size:.30rem;color:red;line-height:1.8;text-indent:.5em;}
+.tiezi-qs-box p{text-indent:2em;line-height:1.5;}

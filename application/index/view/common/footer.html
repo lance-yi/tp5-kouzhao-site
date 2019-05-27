@@ -1,0 +1,49 @@
+<!-- 底部 -->
+<footer>
+    <div class="last-box">
+        <a href="tel:{$phone}" class="last-box-phone">
+            <div>
+                <span><i class="iconfont icon-phone"></i></span>
+                <span>联系客服</span>
+            </div>
+        </a>
+        <a href="#msgBox" class="last-box-msg"><i class="iconfont icon-icon_calendar"></i> 留言免费获取更多资料</a>
+    </div>
+</footer>
+{$code}
+</section>
+</body>
+<script src="__JS__/Home/adaptive.js"></script>
+<script src="__JS__/Home/config.js"></script>
+<script crossorigin="anonymous" integrity="sha384-qu2J8HSjv8EaYlbzBdbVeJncuCmfBqnZ4h3UIBZ9WTZ/5Wrqt0/9hofL0046NCkc"
+        src="//lib.baomitu.com/zepto/1.2.0/zepto.min.js"></script>
+<script>
+
+
+    $(function () {
+
+        $("#info").submit(function (e) {
+            var obj = $("#info").serializeArray();
+            var _flag = new Boolean(true);
+            $.each(obj, function (index, item) {
+                if (item.name == "name") {
+                    if (item.value == "" || $.trim(item.value).length < 2 || $.trim(item.value).length > 4) {
+                        alert("请输入正确的姓名");
+                        _flag = false;
+                        return false;
+                    }
+                }
+                if (item.name == "mobile") {
+                    if (item.value == "" || $.trim(item.value).length != 11) {
+                        alert("请输入正确的手机号");
+                        _flag = false;
+                        return false;
+                    }
+                }
+            });
+            return _flag;
+        });
+    })
+</script>
+
+</html>

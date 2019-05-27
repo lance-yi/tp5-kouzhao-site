@@ -1,0 +1,30 @@
+<!--最新留言-->
+<style>
+    .order_smg{
+        font-size: .28rem;
+        margin: .2rem;
+    }
+</style>
+<div id="demo" class="order_smg"> </div>
+<script>
+    const marquee = new Array(
+        "<p>[最新留言]：189****9954在1分钟前申请了加工名额</p>",
+        "<p>[最新留言]：138****8576在1分钟前申请了办厂的名额</p>",
+        "<p>[最新留言]：156****6310在4分钟前申请了加工名额</p>",
+        "<p>[最新留言]：187****2741在8分钟前申请了办厂的名额</p>",
+        "<p>[最新留言]：147****3417在9分钟前申请了总代理名额</p>");
+    let marqeeI = 0;
+    let marqueeII = 1;
+
+    function marqueeL() {
+
+        if (marqeeI > (marquee.length - 1)) marqeeI = 0;
+        if (marqueeII > (marquee.length - 1)) marqeeI = 0;
+        marqueeII = marqeeI + 1;
+        var marHTML = marquee[marqeeI] + marquee[marqueeII];
+        document.getElementById("demo").innerHTML = marHTML;
+        marqeeI += 1;
+        marqueeII += 1;
+    }
+    window.setInterval("marqueeL()", 2000);
+</script>

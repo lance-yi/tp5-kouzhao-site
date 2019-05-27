@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
+    <title>参数设置</title>
+    <link href="__CSS__/Admin/main/main.css" rel="stylesheet" type="text/css"/>
+    <link href="__CSS__/Admin/main/chrome.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="__JS__/Admin/jquery.min.js"></script>
+    <script type="text/javascript" src="__JS__/Admin/main/jquery.validate.pack.js"></script>
+    <script type="text/javascript" src="__JS__/Admin/main/jquery.metadata.js"></script>
+    <script type="text/javascript" src="__JS__/Admin/main/xheditor-1.1.14/xheditor-1.1.14-zh-cn.min.js"></script>
+    <script type="text/javascript" src="__JS__/Admin/main/artDialog.min.js"></script><!--弹窗插件-->
+    <script type="text/javascript" src="__JS__/Admin/main/myblog.js"></script>
+</head>
+
+<body>
+<div class="panel">
+    <div class="panel-head">
+        <span>参数设置</span>
+    </div>
+    <volist name="result" id="data">
+        <form action="{:url('Option/updateCopy')}" method="post" id="updateArticle" enctype="multipart/form-data">
+            <table id="updateArticleTable">
+                <!--
+                <tr style="height:10px;"></tr>
+                <tr>
+                    <td><label for="articleName">id</label></td>
+                    <td>
+                        <input type="text" name="custid" value="{$data.custid}" class="inputStyle" />
+                    </td>
+                </tr>
+                -->
+                <tr style="height:10px;"></tr>
+                <tr>
+                    <td><label>电话</label></td>
+                    <td>
+                        <input type="text" name="phone" value="{$data.phone}" class="inputStyle"/>
+                    </td>
+                </tr>
+                <tr style="height:10px;"></tr>
+                <tr>
+                    <td><label>53代码</label></td>
+                    <td>
+                        <textarea name="code">{$data.code}</textarea>
+                    </td>
+                </tr>
+                <tr style="height:10px;"></tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div style="width:100%; height:10px; float:left;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="提交" name="Submit"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    </volist>
+    <script type="text/javascript">
+        $(function () {
+            $('#updateArticle').validate({
+                rules: {
+                    webname: {
+                        required: true
+                    },
+                    keyword: {
+                        required: true
+                    },
+                    copy: {
+                        required: true
+                    },
+                    content: {
+                        required: true
+                    }
+                },
+                messages: {
+                    webname: {
+                        required: "网站名称不能为空"
+                    },
+                    keyword: {
+                        required: "关键字不能为空"
+                    },
+                    copy: {
+                        required: "版权不能为空"
+                    },
+                    content: {
+                        required: "站点描述不能为空"
+                    }
+                },
+                errorPlacement: function (error, element) {  //element是验证未通过的当前表单元素,error为错误后的提示信息
+                    error.appendTo(element.parent('td'));
+                },
+                success: function (label) {
+                    label.html("验证成功").addClass("success");
+                }
+            });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.comments{background-color:#fff;border-width:.01rem;border-style:solid;border-color:rgb(188,192,197);border-radius:6px;min-height:4rem;box-sizing:border-box;margin:.04rem;}
+.comments .comments-title{font:.36rem '微软雅黑';color:#333333;font-weight:700;margin-top:.16rem;margin-left:.14rem;margin-bottom:.2rem;}
+.comments .comments-box{box-sizing:border-box;border-bottom:.01rem solid #cccccc;min-height:1rem;padding:.15rem;}
+.comments .comments-box .comments-box-top{display:flex;font-size:.28rem;align-items:center;}
+.comments .comments-box .comments-box-top img{border-radius:50%;height:.8rem;width:.8rem;}
+.comments .comments-box .comments-box-top strong{color:#02879f;margin:0 .15rem;}
+.comments .comments-box .comments-box-text{margin:.25rem;}
+.comments .comments-box .comments-box-text p{line-height:1.5;text-align:justify;color:#6a6a6a;}
+.comments .comments-box .comments-box-time{display:flex;align-items:center;color:#999999;flex:1;justify-content:flex-end;line-height:2;padding-right:.05rem;}
+.comments .comments-box .comments-box-time img{width:.24rem;height:.24rem;}

@@ -1,0 +1,30 @@
+<!-- 留言板 样式一 -->
+<div class="messagebox" id="msgBox">
+    <h2><i class="iconfont icon-icon_calendar"></i> 在线留言</h2>
+    <div class="messagebook">
+        <form action="{:url('adds')}" method="post" id="info">
+            <div style="border: 2px solid red;padding:.4rem;border-radius:10px;">
+                <p>立即留言，离成功更近！</p>
+                <div class="p-input form-name">姓名&nbsp;&nbsp; <input name="name" class="text msg-input" placeholder="如：张先生" value=""
+                                                        type="text"></div>
+                <div class="p-input form-name">手机&nbsp;&nbsp; <input name="mobile" class="text" placeholder="如：13888888888" value=""
+                                                        type="text"></div>
+                <div class="p-button">
+                    <input type="hidden" name="keyword" value="{$keyword}"/>
+                    <input type="hidden" name="plan" value="{$plan}"/>
+                    <input type="hidden" name="unit" value="{$unit}"/>
+                    <input type="hidden" name="shijian" id="shijian" placeholder=""/>
+                    <script type="text/javascript">
+                        window.onload = function () {
+                            var nowDate = new Date();
+                            var str = nowDate.getFullYear() + "-" + (nowDate.getMonth() + 1) + "-" + nowDate.getDate() + " " +
+                                nowDate.getHours() + ":" + nowDate.getMinutes() + ":" + nowDate.getSeconds();
+                            document.getElementById("shijian").value = str;
+                        }
+                    </script>
+                    <button type="submit" class="button"><span>立即留言</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

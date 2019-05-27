@@ -1,0 +1,22 @@
+﻿.itemBox { width:100%; height:auto; min-height:500px; _height:500px; float:left; }
+.itemBox .infobox { width:100%; height:120px; background:#fdfbf8; border-top:1px solid #CCCCCC; border-bottom:1px solid #CCCCCC; }
+.itemBox .infobox .info { width:80%; height:120px; margin:0 auto; }
+.itemBox .infobox .info .infotg { width:80%; height:25px; background:#FFFDCC; margin:0 auto; border:1px solid #CCCCCC; }
+.itemBox .infobox .info .infotg .left { width:80%; height:25px; float:left; text-indent:2em; font-size:12px; line-height:25px; }
+.itemBox .infobox .info .infotg .right { width:20%; height:25px; float:left; font-size:12px; line-height:25px; text-align:left; }
+.itemBox .infobox .info  .parambox { width:75%; height:100px; margin:0 auto; }
+.itemBox .infobox .info  .parambox li { width:200px; height:30px; float:left; font-size:12px; }
+.itemBox .poster { width:100%; min-height:500px; _height:500px; }
+.itemBox .poster .posterhb { width:80%; min-height:500px; _height:500px; margin:0 auto; }
+
+
+
+
+
+
+
+
+
+
+
+
