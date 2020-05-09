@@ -15,11 +15,9 @@
 </body>
 <script src="__JS__/Home/adaptive.js"></script>
 <script src="__JS__/Home/config.js"></script>
-<script crossorigin="anonymous" integrity="sha384-qu2J8HSjv8EaYlbzBdbVeJncuCmfBqnZ4h3UIBZ9WTZ/5Wrqt0/9hofL0046NCkc"
-        src="//lib.baomitu.com/zepto/1.2.0/zepto.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
 <script>
-
-
     $(function () {
 
         $("#info").submit(function (e) {
@@ -27,7 +25,8 @@
             var _flag = new Boolean(true);
             $.each(obj, function (index, item) {
                 if (item.name == "name") {
-                    if (item.value == "" || $.trim(item.value).length < 2 || $.trim(item.value).length > 4) {
+                    if (item.value == "" || $.trim(item.value).length < 2 || $.trim(item.value)
+                        .length > 4) {
                         alert("请输入正确的姓名");
                         _flag = false;
                         return false;
@@ -42,6 +41,11 @@
                 }
             });
             return _flag;
+        });
+
+        // 图片懒加载
+        $("img.lazy").lazyload({
+            effect: "fadeIn"
         });
     })
 </script>
